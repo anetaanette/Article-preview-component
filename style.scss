@@ -1,9 +1,118 @@
-footer {
-  > .attribution {
-    font-size: 11px;
-    text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
+  height: 100vh;
+
+  > main {
+    height: 270px;
+    width: 720px;
+    display: flex;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    > img {
+      width: 315px;
+      height: 270px;
+    }
+    > .right {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      > h1 {
+        font-size: 1.5rem;
+        color: var(--very-dark-grayish-blue);
+      }
+      > .bigger {
+        margin-top: -5px;
+        color: var(--grayish-blue);
+      }
+      > .flex {
+        margin-top: 0.4rem;
+        display: flex;
+        gap: 1.7rem;
+        position: relative;
+        > .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+        > .column {
+          > h2 {
+            color: var(--very-dark-grayish-blue);
+          }
+          .smaller {
+            margin-top: -0.7rem;
+            color: var(--grayish-blue);
+          }
+        }
+        .share-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          background: var(--light-grayish-blue);
+          border-radius: 50%;
+          cursor: pointer;
+          position: relative;
+          //left: 60px;
+          //top: 15px;
+          > .share_bubble {
+            display: none;
+            position: absolute;
+            top: -70px;
+            border-radius: 10px;
+            width: 250px;
+            background-color: var(--very-dark-grayish-blue);
+            justify-content: space-evenly;
+            align-items: center;
+            > p {
+              letter-spacing: 5px;
+              color: var(--desaturated-dark-blue);
+            }
+          }
+          > .share_bubble.active {
+            display: flex;
+          }
+          > .bubble-bottom-center:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid hsl(217, 19%, 35%);
+            bottom: -10px;
+          }
+        }
+      }
+    }
   }
-  > .attribution a {
-    color: hsl(228, 45%, 44%);
+  > footer {
+    > .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    > .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   }
 }
