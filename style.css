@@ -38,7 +38,6 @@ body > main {
   gap: 2rem;
   background-color: white;
   border-radius: 1rem;
-  overflow: hidden;
 }
 
 body > main > img {
@@ -107,6 +106,8 @@ body > main > .right > .flex .share-wrapper {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  left: 80px;
+  top: 15px;
 }
 
 body > main > .right > .flex .share-wrapper > .share_bubble {
@@ -147,12 +148,64 @@ body > main > .right > .flex .share-wrapper > .bubble-bottom-center:after {
   bottom: -10px;
 }
 
+body > main > .right > .flex > .icon-share:hover {
+  background-color: var(--light-grayish-blue);
+}
+
+body > main > .right > .flex > .share-wrapper:hover {
+  background-color: var(--very-dark-grayish-blue);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body > footer {
+  font-size: 10px;
+}
+
 body > footer > .attribution {
-  font-size: 11px;
   text-align: center;
 }
 
 body > footer > .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  body > main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 99%;
+  }
+  body > main > img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  body > main > .right {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

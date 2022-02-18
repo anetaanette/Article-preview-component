@@ -26,7 +26,6 @@ body {
     gap: 2rem;
     background-color: white;
     border-radius: 1rem;
-    overflow: hidden;
     > img {
       width: 315px;
       height: 270px;
@@ -35,6 +34,7 @@ body {
       display: flex;
       flex-direction: column;
       padding: 1rem;
+
       > h1 {
         font-size: 1.5rem;
         color: var(--very-dark-grayish-blue);
@@ -72,8 +72,8 @@ body {
           border-radius: 50%;
           cursor: pointer;
           position: relative;
-          //left: 60px;
-          //top: 15px;
+          left: 80px;
+          top: 15px;
           > .share_bubble {
             display: none;
             position: absolute;
@@ -103,16 +103,48 @@ body {
             bottom: -10px;
           }
         }
+        > .icon-share:hover {
+          background-color: var(--light-grayish-blue);
+        }
+        > .share-wrapper:hover {
+          background-color: var(--very-dark-grayish-blue);
+          transition: all 0.3s ease;
+        }
       }
     }
   }
   > footer {
+    font-size: 10px;
     > .attribution {
-      font-size: 11px;
       text-align: center;
     }
     > .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    > main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 99%;
+      > img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+      > .right {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }
