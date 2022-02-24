@@ -38,6 +38,7 @@ body > main {
   gap: 2rem;
   background-color: white;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 body > main > img {
@@ -150,26 +151,29 @@ body > main > .right > .flex .share-wrapper > .bubble-bottom-center:after {
 
 body > main > .right > .flex > .icon-share:hover {
   background-color: var(--light-grayish-blue);
+  -webkit-transition-delay: all 1s ease-in;
+          transition-delay: all 1s ease-in;
 }
 
 body > main > .right > .flex > .share-wrapper:hover {
   background-color: var(--very-dark-grayish-blue);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition-delay: all 4s ease-in;
+          transition-delay: all 4s ease-in;
 }
 
 body > footer > .attribution {
   text-align: center;
   font-size: 10px;
+  color: #3e52a3;
 }
 
 body > footer > .attribution a {
-  color: #3e52a3;
   font-size: 10px;
 }
 
 @media only screen and (max-width: 450px) {
   body {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -183,9 +187,9 @@ body > footer > .attribution a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
   }
   body > main {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -199,7 +203,6 @@ body > footer > .attribution a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 99%;
     max-width: 315px;
     overflow: hidden;
   }
@@ -209,24 +212,33 @@ body > footer > .attribution a {
     margin-top: -50px;
   }
   body > main > .right {
-    max-width: 100%;
-    max-height: 100%;
     margin-top: -20px;
     padding: 1.3rem;
     padding-top: 0;
-    /*  > .share-wrapper {
-          position: relative;
-          left: 20px;
-          top: 15px;
-        } */
   }
   body > main > .right > h1 {
     font-size: 1.4rem;
   }
   body > main > .right > .flex {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 0;
+  }
+  body > main > .right > .flex > .avatar {
+    margin-right: 1.5rem;
+  }
+  body > main > .right > .flex > .share-wrapper {
+    margin-left: -2rem;
+  }
+  body > main > .right > .flex > .share-wrapper .bubble-bottom-center:after {
+    content: "";
+    position: absolute;
+    max-width: 315px;
+    max-height: 300px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
