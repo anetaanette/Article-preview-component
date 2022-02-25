@@ -236,9 +236,10 @@ body > footer > .attribution a {
   body > main > .right > .flex > .share-wrapper .bubble-bottom-center:after {
     content: "";
     position: absolute;
-    max-width: 315px;
-    max-height: 300px;
-    margin: 0 auto;
+    min-width: 315px;
+    min-height: 100px;
+    position: relative;
+    bottom: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
